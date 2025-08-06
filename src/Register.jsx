@@ -16,9 +16,9 @@ const Register = () => {
         e.preventDefault();
 
 
-    //   if(!fullName || !email || !password){
-    //   alert("all field are required")
-    // }
+      if(!fullName || !email || !password){
+      alert("all field are required")
+    }
 
 
 

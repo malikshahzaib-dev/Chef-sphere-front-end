@@ -12,9 +12,9 @@ const LoginPage = () =>{
         e.preventDefault()
 
 
-//    if(  !email || !password){
-//     alert("something went wrong")
-//    }
+   if(  !email || !password){
+    alert("something went wrong")
+   }
 
         const dataForm = {
             email,
@@ -38,32 +38,6 @@ const LoginPage = () =>{
     return (
 
         <>
-{/*         
-           <div className="d-flex justify-content-around align-items-center py-4 border fixed-top" style={{ height: "70px", background: "white" }}>
-
-                <div className="d-flex align-items-center gap-4">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chef-hat"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c1.918 0 3.52 1.35 3.91 3.151a4 4 0 0 1 2.09 7.723l0 7.126h-12v-7.126a4 4 0 1 1 2.092 -7.723a4 4 0 0 1 3.908 -3.151z" /><path d="M6.161 17.009l11.839 -.009" /></svg>
-                    </div>
-                    <div>
-                        <h1 style={{ alignItems: "center", fontSize: "24px", fontWeight: "700" }}>RecipeShare</h1>
-                    </div>
-                </div>
-                <div className="d-flex gap-5">
-                    <a style={{ fontSize: "20px", fontWeight: "500", color: "black" }} href="Recipies">Recipes</a>
-                    <a style={{ fontSize: "20px", fontWeight: "500", color: "black" }} href="Category">Category</a>
-
-                </div>
-
-                <div className="d-flex gap-4 align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>  <input className="rounded border" type="text" name="search" id="search" placeholder="searh..." style={{ height: "44px", width: "300px", paddingLeft: "12px" }} />
-                    <a href="AddRecipies"> <button className="rounded border" style={{ height: "40px", width: "150px" }}> + Add Recipe</button>
-                    </a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
-                </div>
-            </div> */}
-
-
 
 
    <div  className=" d-flex mt-5 rounded" style={{height:"88vh",width:"100vw",background:"#fff5ef"}}>
