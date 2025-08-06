@@ -5,22 +5,18 @@ import image4 from "../src/images/img-4.jpg"
 import image5 from "../src/images/img-5.webp"
 import image6 from "../src/images/img-6.webp"
 import image7 from "../src/images/img-7.webp"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 
 
 
 const Recipies = () => {
-  const userId = localStorage.getItem("userId")
-  console.log(userId,"userId")
   const navigate = useNavigate()
   const [recepies, setRecepies] = useState([])
   useEffect(() => {
 
     
 
-   if(userId){
-    navigate("/MyRecipes")
-   }
+   
 
     
     fetch("http://localhost:3000/recipes/" , {

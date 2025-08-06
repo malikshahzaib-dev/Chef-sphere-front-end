@@ -13,13 +13,14 @@ const Register = () => {
     console.log(password, "email")
 
     const handleSubmit = (e) => {
-
-      if(!fullName || !email || !password){
-      alert("all field are required")
-    }
-
-
         e.preventDefault();
+
+
+    //   if(!fullName || !email || !password){
+    //   alert("all field are required")
+    // }
+
+
 
         const dataForm = {
             fullName,
@@ -35,9 +36,11 @@ const Register = () => {
             }
         }).then(res => res.json()).then(data => {
 
+             console.log("Signup Response:", data)
+
+
             localStorage.setItem('user', JSON.stringify(data.user))
 
-            console.log(data.user,"du")
             localStorage.setItem('token', data.token)
             navigate('/')
 
