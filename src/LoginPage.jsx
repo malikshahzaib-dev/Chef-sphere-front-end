@@ -9,6 +9,11 @@ const LoginPage = () =>{
     const [password,setPassword] = useState("")
 
     const handleSubmit = (e) =>{
+
+   if(  !email || !password){
+    alert("something went wrong")
+   }
+
         e.preventDefault()
         const dataForm = {
             email,
@@ -24,7 +29,7 @@ const LoginPage = () =>{
         }).then(res => res.json()).then(data =>{
             localStorage.setItem("user",JSON.stringify(data.user))
             localStorage.setItem("token",data.token)
-        navigate("/home")
+        navigate("/")
 
 
         })
@@ -80,7 +85,7 @@ const LoginPage = () =>{
                     <label htmlFor="password" className="mt-4">password</label><br />
                     <input onChange={(e) =>setPassword(e.target.value)} className="rounded border"  type="password" name="password" id="password" placeholder="enter-password" style={{height:"48px", width:"100%" ,paddingLeft:"8px"}} />
                 </div>
-                <a href="/Home">
+                <a href="/home">
                 <div  className="d-flex justify-content-center">
                     <button type="submit" className="btn btn-dark mt-4" style={{height:"48px" ,width:"200px"}}>Login</button>
                 </div>

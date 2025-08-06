@@ -13,6 +13,12 @@ const Register = () => {
     console.log(password, "email")
 
     const handleSubmit = (e) => {
+
+      if(!fullName || !email || !password){
+      alert("all field are required")
+    }
+
+
         e.preventDefault();
 
         const dataForm = {
@@ -30,11 +36,10 @@ const Register = () => {
         }).then(res => res.json()).then(data => {
 
             localStorage.setItem('user', JSON.stringify(data.user))
-            localStorage.setItem('user', JSON.stringify(data.user._id))
 
             console.log(data.user,"du")
             localStorage.setItem('token', data.token)
-            navigate('/Home')
+            navigate('/')
 
         })
 
@@ -76,6 +81,7 @@ const Register = () => {
                                 <input onChange={(e) => { setPassword(e.target.value) }} type="password" name="password" id="password" placeholder="enter-password" className="rounded border" style={{ width: "100%", height: "48px", paddingLeft: "8px", }} />
                             </div>
                             <div className=" d-flex justify-content-center" >
+                                
                                 <button type="submit" className="mt-4 rounded bg-dark text-white" style={{ height: "40px", width: "160px" }}>Register</button>
                             </div>
                             <div className=" d-flex justify-content-center mt-3" >

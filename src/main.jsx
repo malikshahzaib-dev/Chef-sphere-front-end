@@ -16,18 +16,18 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>  
     <Routes>
-      <Route path='/' element={<App/>}/>
+      {/* <Route path='/' element={<App/>}/> */}
+      <Route path='/' element={<Home/>}/>
       <Route path='/recipies' element={<Recipies/>}/>
       <Route path='/recipe/:id' element={<RecipiesDetails />} />
-      <Route path='/Register' element={<Register/>}/>
-      <Route path='/loginPage' element={<LoginPage/>}/>
-      <Route path='/addRecipies' element={<AddRecipies/>}/>
+      <Route path='/register' element={<Register/>}/>
+      <Route path='/login-page' element={<LoginPage/>}/>
+      <Route path='/add-recipies' element={<AddRecipies/>}/>
       <Route path='/myRecipes/:userId' element={<MyRecipes/>}/>
 
       <Route path='/recipe/update/:id' element={<UpdateRecipe/>}/>
 
       <Route path='/category' element={<Category/>}/>
-      <Route path='/home' element={<Home/>}/>
 
     </Routes>
     </BrowserRouter>
